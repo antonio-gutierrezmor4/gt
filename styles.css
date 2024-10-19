@@ -1137,23 +1137,29 @@ html {
     }
 }
 
+/* Estilos normales para pantallas grandes */
+.container-logo, .content-customer-support {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-    /* Centrar el logo */
-    .container-logo {
-        text-align: center; /* Centramos el contenido dentro del contenedor */
-        margin-bottom: 10px; /* Espacio debajo del logo */
+    /* Alineamos el logo y el soporte al cliente uno debajo del otro */
+    .container-logo, .content-customer-support {
+        display: block; /* Cambiamos a bloque para que se apilen */
+        width: 100%; /* Ocupar todo el ancho */
+        text-align: center; /* Centramos el contenido */
+        margin: 0 auto; /* Para que estén centrados */
     }
 
-    /* Mover soporte al cliente debajo del logo */
+    /* Añadimos un margen entre el logo y el soporte */
     .content-customer-support {
-        display: block;
-        text-align: center; /* Centramos el texto */
-        margin-top: 10px; /* Espacio entre el logo y el soporte */
+        margin-top: 10px; /* Espacio entre logo y soporte al cliente */
     }
 
-    /* Esconder el contenedor de usuario */
+    /* Escondemos el contenedor de usuario en móviles */
     .container-user {
-        display: none; /* Escondemos el contenedor en móviles */
+        display: none;
     }
 }
